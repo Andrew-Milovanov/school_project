@@ -1,0 +1,18 @@
+$flow: #1d3d64;
+
+.posts__form {
+  &__caption {
+    font-size: 1.5em;
+    line-height: 29px;
+    margin: 75px 30px 30px 70px;
+    color: $flow;
+  }
+
+  &__post {
+    display: flex;
+    height: 150px;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
+    margin: 15px 35px;
+  }
+}

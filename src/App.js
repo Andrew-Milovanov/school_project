@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Route } from "react-router-dom";
 
-import { NavBar, Posts } from "./components";
+import { Login, NavBar, Posts } from "./components";
 
 function App() {
   const [exit, setExit] = useState(true);
@@ -9,12 +10,18 @@ function App() {
 
   return (
     <div className="admin">
-      <div className={"admin__NavBar"}>
-        {exit && <NavBar setExit={setExit} />}
-      </div>
-      <div>
-        <Posts />
-      </div>
+      {exit ? (
+        <div className="admin__open">
+          <div className={"admin__NavBar"}>
+            <NavBar setExit={setExit} />
+          </div>
+          <div className={"admin__Posts"}>
+            <Route exact path="/" render={() => <Posts />} />
+          </div>
+        </div>
+      ) : (
+        <Login />
+      )}
     </div>
   );
 }

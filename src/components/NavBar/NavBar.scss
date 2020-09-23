@@ -7,15 +7,26 @@ $edges: #1d3d64;
   flex-direction: column;
   &__header {
     background-color: $edges;
-    height: 100px;
+    height: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
 
   &__main {
-    height: 680px;
-    padding: 25px 20px;
+    height: 85%;
+    padding: 25px 20px 25px 0px;
+
+    a {
+      text-transform: none;
+      text-decoration: none;
+    }
+    .active {
+      li {
+        background-color: rgba(50, 144, 203, 0.05);
+        border-left: 3px solid #1d3d64;
+      }
+    }
   }
 
   &__info {
@@ -32,7 +43,7 @@ $edges: #1d3d64;
 
       p {
         color: #323232;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 17px;
       }
 
@@ -47,7 +58,8 @@ $edges: #1d3d64;
     display: flex;
     align-items: center;
     color: $edges;
-    font-weight: 600;
+    font-weight: 500;
+    padding-left: 20px;
 
     img {
       padding: 19px 26px 19px 11px;
